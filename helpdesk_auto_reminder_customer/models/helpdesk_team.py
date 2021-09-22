@@ -47,7 +47,7 @@ class HelpdeskTeam(models.Model):
             self.env["ir.config_parameter"]
             .sudo()
             .get_param(
-                "helpdesk_auto_reminder_customer." "helpdesk_ticket_reminder_start_date"
+                "helpdesk_auto_reminder_customer.helpdesk_ticket_reminder_start_date"
             )
         )
         reminder_start_date = fields.Date.from_string(reminder_start_date)
