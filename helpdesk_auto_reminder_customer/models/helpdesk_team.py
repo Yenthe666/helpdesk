@@ -6,7 +6,7 @@ from odoo import api, fields, models
 class HelpdeskTeam(models.Model):
     _inherit = "helpdesk.team"
 
-    # add new fields #386
+    # add new fields
     send_reminder_after = fields.Integer(string="Send Reminder After", copy=False)
     reminder_template_id = fields.Many2one(
         "mail.template",
@@ -35,7 +35,7 @@ class HelpdeskTeam(models.Model):
     @api.model
     def _cron_auto_reminder_to_customer(self):
         """If no answer on ticket from customer in given send_reminder_after field
-        then we Send reminder after to customer # 386"""
+        then we Send reminder after to customer"""
         teams = self.search(
             [
                 ("send_reminder_after", "!=", 0),
@@ -43,17 +43,16 @@ class HelpdeskTeam(models.Model):
                 ("reminder_template_id", "!=", False),
             ]
         )
-        for team in teams:
-            reminder_start_date = (
-                self.env["ir.config_parameter"]
-                .sudo()
-                .get_param(
-                    "helpdesk_auto_reminder_customer."
-                    "helpdesk_ticket_reminder_start_date"
-                )
+        reminder_start_date = (
+            self.env["ir.config_parameter"]
+            .sudo()
+            .get_param(
+                "helpdesk_auto_reminder_customer." "helpdesk_ticket_reminder_start_date"
             )
-            reminder_start_date = fields.Date.from_string(reminder_start_date)
+        )
+        reminder_start_date = fields.Date.from_string(reminder_start_date)
 
+        for team in teams:
             calculated_date = fields.Date.today() - timedelta(
                 days=team.send_reminder_after
             )
@@ -78,7 +77,7 @@ class HelpdeskTeam(models.Model):
     @api.model
     def _cron_auto_close_stage(self):
         """if no answer from customer in reminder mail then
-        automatic close ticket and set closing stage given in helpdesk team # 386"""
+        automatic close ticket and set closing stage given in helpdesk team"""
         teams = self.search(
             [
                 ("days_before_auto_closure", "!=", 0),

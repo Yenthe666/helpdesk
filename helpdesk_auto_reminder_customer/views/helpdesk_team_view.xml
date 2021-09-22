@@ -2,8 +2,8 @@
 <odoo>
 
     <!-- Inherit helpdesk.team form view and add field # 380 -->
-    <record id="helpdesk_team_view_form_inherit" model="ir.ui.view">
-        <field name="name">helpdesk.team.form.inherit</field>
+    <record id="helpdesk_team_view_auto_cust_reminder_form_inherit" model="ir.ui.view">
+        <field name="name">helpdesk.team.auto.cust.reminder.form.inherit</field>
         <field name="model">helpdesk.team</field>
         <field name="inherit_id" ref="helpdesk.helpdesk_team_view_form" />
         <field name="arch" type="xml">
@@ -100,8 +100,8 @@
         </field>
     </record>
 
-    <record id="helpdesk_ticketview_form_inherit" model="ir.ui.view">
-        <field name="name">helpdesk.ticket.form.inherit</field>
+    <record id="helpdesk_ticketview_form_auto_cust_reminder_inherit" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.auto.cust.reminder.form.inherit</field>
         <field name="model">helpdesk.ticket</field>
         <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form" />
         <field name="arch" type="xml">
