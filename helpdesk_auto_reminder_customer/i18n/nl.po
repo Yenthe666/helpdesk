@@ -60,7 +60,7 @@ msgstr "Afsluitfase wanneer er geen antwoord is van de klant."
 #. module: helpdesk_auto_reminder_customer
 #: model:ir.model.fields,field_description:helpdesk_auto_reminder_customer.field_helpdesk_ticket__already_informed
 msgid "Customer has been informed"
-msgstr ""
+msgstr "Klant is geinformeerd"
 
 #. module: helpdesk_auto_reminder_customer
 #: model_terms:ir.ui.view,arch_db:helpdesk_auto_reminder_customer.helpdesk_team_view_form_inherit
