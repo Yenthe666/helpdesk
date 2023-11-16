@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Inherit helpdesk.stage form view and add field #T-01723 -->
+    <record id="helpdesk_stage_view_form_inherit" model="ir.ui.view">
+        <field name="name">helpdesk.stage.form.inherit</field>
+        <field name="model">helpdesk.stage</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_stage_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='fold']" position="after">
+                <field name="is_auto_change_ticket_stage" />
+                <field name="auto_change_stage_id"
+                    attrs="{'invisible': [('is_auto_change_ticket_stage', '=', False)]}"
+                    domain="[('team_ids', 'in', team_ids)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

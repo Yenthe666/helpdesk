@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* helpdesk_auto_stage_on_reply
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-16 10:43+0000\n"
+"PO-Revision-Date: 2023-11-16 10:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: helpdesk_auto_stage_on_reply
+#: model:ir.model.fields,field_description:helpdesk_auto_stage_on_reply.field_helpdesk_stage__auto_change_stage_id
+msgid "Auto Change Stage"
+msgstr "Automatisch fase veranderen"
+
+#. module: helpdesk_auto_stage_on_reply
+#: model:ir.model.fields,field_description:helpdesk_auto_stage_on_reply.field_helpdesk_stage__is_auto_change_ticket_stage
+msgid "Auto Change Ticket Stage"
+msgstr "Automatisch ticket fase veranderen"
+
+#. module: helpdesk_auto_stage_on_reply
+#: model:ir.model,name:helpdesk_auto_stage_on_reply.model_helpdesk_stage
+msgid "Helpdesk Stage"
+msgstr "Helpdeskfase"
+
+#. module: helpdesk_auto_stage_on_reply
+#: model:ir.model,name:helpdesk_auto_stage_on_reply.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Helpdeskticket"
