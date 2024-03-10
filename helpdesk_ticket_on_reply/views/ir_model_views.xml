@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_model_form" model="ir.ui.view">
+            <field name="name">ir.model.form</field>
+            <field name="model">ir.model</field>
+            <field name="inherit_id" ref="base.view_model_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/group[1]" position="inside">
+                    <field name="create_helpdesk_ticket_on_message" groups="base.group_no_one"
+                           attrs="{'invisible': [('is_mail_thread', '=', False)]}"
+                    />
+                    <field name="partner_field_name" groups="base.group_no_one"
+                           attrs="{'invisible': [('create_helpdesk_ticket_on_message', '=', False)]}"
+                    />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
