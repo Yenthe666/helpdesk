@@ -50,7 +50,7 @@ class MailThread(models.AbstractModel):
                 if email_split(message.email_from)
                 else ""
             )
-            if res_model.create_helpdesk_ticket_on_message and \
+            if res_model.create_helpdesk_ticket_on_message and message.message_type != 'notification' and message.message_type != "comment" and \
                     (from_email in email or (message.author_id and message.author_id.email in email)):
                 self.sudo()._create_new_helpdesk_ticket(res_model, message)
         return message
