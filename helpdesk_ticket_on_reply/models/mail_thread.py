@@ -37,8 +37,8 @@ class MailThread(models.AbstractModel):
         """
         message = super(MailThread, self).message_post(**kwargs)
         res_model_id = self.env['ir.model']._get_id(self._name)
-        res_model = self.env['ir.model'].browse(res_model_id)
-        original_record = self.env[self._name].browse(message.res_id)
+        res_model = self.env['ir.model'].sudo().browse(res_model_id)
+        original_record = self.env[self._name].sudo().browse(message.res_id)
         # Check for partner_field_name from model and email of author
         partner_field = res_model.partner_field_name or 'partner_id'
         if hasattr(original_record, partner_field):
