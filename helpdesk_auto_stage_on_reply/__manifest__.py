@@ -4,7 +4,7 @@
     "category": "Helpdesk",
     "depends": ["helpdesk", "hr"],
     "author": "Mainframe Monkey",
-    "license": "AGPL-3",
+    "license": "OPL-1",
     "website": "https://www.mainframemonkey.com",
     "data": [
         "views/helpdesk_stage_view.xml",
