@@ -42,6 +42,8 @@ class MailThread(models.AbstractModel):
         # Check for partner_field_name from model and email of author
         partner_field = res_model.partner_field_name or 'partner_id'
         if hasattr(original_record, partner_field):
+            if isinstance(partner_id, int):
+                partner_id = self.env['res.partner'].sudo().browse(partner_id)
             email = original_record.partner_id.child_ids.mapped("email")
             if original_record.partner_id.email:
                 email.append(original_record.partner_id.email)
