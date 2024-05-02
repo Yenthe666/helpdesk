@@ -16,3 +16,9 @@ class IrModel(models.Model):
         help="Enter the relation field name of res.partner to check for valid email",
         copy=False
     )
+
+    user_field_name = fields.Char(
+        string='Assigned user field',
+        help="Enter the relation field name of res.user to assign new ticket",
+        copy=False
+    )

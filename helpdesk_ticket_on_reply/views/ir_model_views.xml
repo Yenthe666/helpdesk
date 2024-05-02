@@ -13,6 +13,9 @@
                     <field name="partner_field_name" groups="base.group_no_one"
                            attrs="{'invisible': [('create_helpdesk_ticket_on_message', '=', False)]}"
                     />
+                    <field name="user_field_name" groups="base.group_no_one"
+                           attrs="{'invisible': [('create_helpdesk_ticket_on_message', '=', False)]}"
+                    />
                 </xpath>
             </field>
         </record>

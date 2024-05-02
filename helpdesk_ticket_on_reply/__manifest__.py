@@ -1,6 +1,6 @@
 {
     "name": "Helpdesk Ticket On Reply",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.0.1",
     "category": "Helpdesk",
     "depends": ["helpdesk",],
     "author": "Mainframe Monkey",

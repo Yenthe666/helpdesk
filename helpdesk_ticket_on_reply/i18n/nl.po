@@ -6,14 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-10 13:24+0000\n"
-"PO-Revision-Date: 2024-03-10 13:24+0000\n"
+"POT-Creation-Date: 2024-03-25 11:10+0000\n"
+"PO-Revision-Date: 2024-03-25 11:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: helpdesk_ticket_on_reply
+#: model:ir.model.fields,field_description:helpdesk_ticket_on_reply.field_ir_model__user_field_name
+msgid "Assigned user field"
+msgstr "Veldnaam voor toegewezen gebruiker"
 
 #. module: helpdesk_ticket_on_reply
 #: model:ir.model.fields,field_description:helpdesk_ticket_on_reply.field_ir_model__create_helpdesk_ticket_on_message
@@ -23,7 +28,8 @@ msgstr "Nieuw helpdesk ticket aanmaken?"
 #. module: helpdesk_ticket_on_reply
 #: model_terms:ir.ui.view,arch_db:helpdesk_ticket_on_reply.helpdesk_team_view_form
 msgid "Create new helpdesk tickets for responses on the following models:"
-msgstr "Nieuwe helpdesk tickets aanmaken voor reacties op de volgende modellen:"
+msgstr ""
+"Nieuwe helpdesk tickets aanmaken voor reacties op de volgende modellen:"
 
 #. module: helpdesk_ticket_on_reply
 #. odoo-python
@@ -40,12 +46,21 @@ msgstr "E-mail discussie"
 #. module: helpdesk_ticket_on_reply
 #: model:ir.model.fields,help:helpdesk_ticket_on_reply.field_ir_model__create_helpdesk_ticket_on_message
 msgid "Enable to create new Helpdesk Ticket on customer's reply"
-msgstr "Schakel deze optie in om nieuwe helpdesk tickets aan te maken indien klanten reageren"
+msgstr ""
+"Schakel deze optie in om nieuwe helpdesk tickets aan te maken indien klanten"
+" reageren"
 
 #. module: helpdesk_ticket_on_reply
 #: model:ir.model.fields,help:helpdesk_ticket_on_reply.field_ir_model__partner_field_name
 msgid "Enter the relation field name of res.partner to check for valid email"
-msgstr "Geef het relatieveld in van de klant (contact) om de controle op een geldig emailadres te doen"
+msgstr ""
+"Geef het relatieveld in van de klant (contact) om de controle op een geldig "
+"emailadres te doen"
+
+#. module: helpdesk_ticket_on_reply
+#: model:ir.model.fields,help:helpdesk_ticket_on_reply.field_ir_model__user_field_name
+msgid "Enter the relation field name of res.user to assign new ticket"
+msgstr "Geef de naam in van het relationele veld dat linkt naar de res.users (gebruiker) om een nieuw ticket aan toe te wijzen"
 
 #. module: helpdesk_ticket_on_reply
 #: model:ir.model,name:helpdesk_ticket_on_reply.model_helpdesk_team
@@ -69,9 +84,11 @@ msgid ""
 "The models filled in here will be tracked to create new tickets from.If we "
 "get an incoming reply into Odoo for one of these models and it is coming "
 "from the customer it willautomatically create a new helpdesk ticket."
-msgstr "De modellen hier ingevuld worden opgevolgd om nieuwe tickets aan te maken."
-"Indien we een inkomende reactie in Odoo binnenkrijgen voor één van deze models en het antwoord "
-"komt van de klant maken we automatisch een nieuw helpdesk ticket aan."
+msgstr ""
+"De modellen hier ingevuld worden opgevolgd om nieuwe tickets aan te "
+"maken.Indien we een inkomende reactie in Odoo binnenkrijgen voor één van "
+"deze models en het antwoord komt van de klant maken we automatisch een nieuw"
+" helpdesk ticket aan."
 
 #. module: helpdesk_ticket_on_reply
 #. odoo-python
@@ -80,6 +97,6 @@ msgstr "De modellen hier ingevuld worden opgevolgd om nieuwe tickets aan te make
 msgid ""
 "This ticket has been generated from %s: <a href=# data-oe-model=%s data-oe-"
 "id=%d>%s</a>"
-msgstr "
+msgstr ""
 "Dit ticket is aangemaakt vanuit %s: <a href=# data-oe-model=%s data-oe-"
 "id=%d>%s</a>"
