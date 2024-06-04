@@ -60,5 +60,7 @@ class MailThread(models.AbstractModel):
                 helpdesk_ticket = self.sudo()._create_new_helpdesk_ticket(res_model, message, partner_id)
                 user_field = res_model.user_field_name
                 if user_field and hasattr(original_record, user_field):
+                    if helpdesk_ticket.user_id:
+                        helpdesk_ticket.message_unsubscribe(partner_ids=helpdesk_ticket.user_id.partner_id.ids)
                     helpdesk_ticket.user_id = getattr(original_record, user_field).id
         return message
