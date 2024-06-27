@@ -6,7 +6,7 @@ Apps related to the Odoo helpdesk app (enterprise)
 ## helpdesk_auto_reminder_customer
 Adds support to automatically send reminders to customers when a ticket is in some specific stages.
 This module allows you to configure, per helpdesk team:
-- After how many days you want to send a reminder to the custmoer
+- After how many days you want to send a reminder to the customer
 - Which reminder (e-mail template) you'd like to send
 - Which stages should auto send a reminder
 - When to auto-close a ticket
