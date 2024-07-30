@@ -1,0 +1,22 @@
+<odoo>
+    <record id="res_config_settings_view_form_purchase" model="ir.ui.view">
+        <field name="name">helpdesk.blacklist.res.config.settings.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="mail.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='emails']" position="after">
+                <h2>Helpdesk Auto Match Company</h2>
+                <div class="row mt16 o_settings_container" name="helpdesk_blacklisted_domains">
+                    <div class="col-12 col-lg-6 o_setting_box" id="helpdesk_blacklisted_domains">
+                        <label for="helpdesk_blacklisted_domains"/>
+                        <field name="helpdesk_blacklisted_domains"/>
+                        <div class="text-muted">
+                            You can add multiple domains to block, separated by semicolons (;). <br/>
+                            <b>For example:</b> gmail.com;hotmail.com;ymail.com
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
